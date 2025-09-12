@@ -1,9 +1,10 @@
 import { ClickSide } from "./clickSide";
 
-export const Game = ()=>{
+
+export const Game = ({mouseCount}: IMouse)=>{
     return(
         <main className="flex flex-row w-full h-[calc(100vh-10vh)]">
-            <ClickSide/>
+            <ClickSide mouseCount={mouseCount}/>
         </main>
     )
 };

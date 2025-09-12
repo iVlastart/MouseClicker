@@ -1,0 +1,3 @@
+interface IMouse{
+    mouseCount: number
+}
