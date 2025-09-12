@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header/>
-      <Game mouseCount={mouseCount}/>
+      <Game mouseCount={mouseCount} setMouseCount={setMouseCount}/>
     </>
   )
 }
