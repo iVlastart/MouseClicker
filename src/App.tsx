@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { Game } from "./components/game/game"
+import { Game } from "./components/game"
 import { Header } from "./components/header"
-import { useUnsavedChanges } from "./hooks/saveHook";
+import { useUnsavedChanges } from "./hooks/hooks";
 
 function App() {
   const [mouseCount, setMouseCount] = useState<number>(Number(localStorage.getItem('mouseCount'))??0);

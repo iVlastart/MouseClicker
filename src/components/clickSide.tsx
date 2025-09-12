@@ -1,5 +1,5 @@
-import type { IMouse } from '../../interfaces/interfaces';
-import mouseImg from '../sprites/mouse.png';
+import type { IMouse } from '../interfaces/interfaces';
+import mouseImg from './sprites/mouse.png';
 
 export const ClickSide = ({mouseCount, setMouseCount}:IMouse)=>{
 
@@ -8,12 +8,12 @@ export const ClickSide = ({mouseCount, setMouseCount}:IMouse)=>{
     };
 
     return(
-        <div className="flex flex-col h-full w-1/4">
+        <div className="flex flex-col h-full w-1/4 border-r border-black">
             <span className="max-w-sm mt-10 flex justify-center items-center bg-white border 
                             border-gray-200 rounded-lg shadow-sm w-full">
                 {mouseCount}
             </span>
-            <div className="pt-52 md:pt-24 pl-3 md:pl-10">
+            <div className="pt-52 md:pt-24 pl-3 md:pl-10 pr-5 md:pr-0">
                 <img src={mouseImg} className='h-25 w-25 md:h-65 md:w-65 hover:cursor-pointer' 
                         onClick={handleMouseImgClick}/>
             </div>
