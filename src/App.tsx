@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Game } from "./components/game/game"
 import { Header } from "./components/header"
+import { useUnsavedChanges } from "./hooks/saveHook";
 
 function App() {
-  const [mouseCount, setMouseCount] = useState<number>(Number(localStorage.getItem('mouseCount'))?? 0);
+  const [mouseCount, setMouseCount] = useState<number>(Number(localStorage.getItem('mouseCount'))??0);
 
-  useEffect(()=>{
-    const beforeUnload = (e: BeforeUnloadEvent)=>{
-      e.preventDefault();
-    };
-
-    window.addEventListener('beforeunload', beforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', beforeUnload);
-    };
-  },[])
+  useUnsavedChanges(mouseCount);
   return (
     <>
       <Header/>

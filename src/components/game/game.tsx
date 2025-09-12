@@ -1,4 +1,4 @@
-import type { IMouse } from "../../interfaces/IMouse";
+import type { IMouse } from "../../interfaces/interfaces";
 import { ClickSide } from "./clickSide";
 
 

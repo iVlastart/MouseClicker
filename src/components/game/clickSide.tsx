@@ -1,4 +1,4 @@
-import type { IMouse } from '../../interfaces/IMouse';
+import type { IMouse } from '../../interfaces/interfaces';
 import mouseImg from '../sprites/mouse.png';
 
 export const ClickSide = ({mouseCount, setMouseCount}:IMouse)=>{
