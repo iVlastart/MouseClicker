@@ -8,7 +8,7 @@ export const ClickSide = ({mouseCount, setMouseCount}:IMouse)=>{
     };
 
     return(
-        <div className="flex flex-col h-full w-1/4 border-r border-black">
+        <div className="flex flex-col h-full w-1/2 md:w-1/4 border-r border-black">
             <span className="max-w-sm mt-10 flex justify-center items-center bg-white border 
                             border-gray-200 rounded-lg shadow-sm w-full">
                 {mouseCount}

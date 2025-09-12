@@ -5,8 +5,15 @@ interface IMouse{
     setMouseCount: Dispatch<SetStateAction<number>>
 }
 
+interface IMouseTrap{
+    
+}
 interface IUpgrade{
+    key: number,
     img: string,
     price: number,
-    isVisible: boolean
+    increment: number, 
+    count: number,
+    isVisible: boolean,
+    mouse: IMouse
 }

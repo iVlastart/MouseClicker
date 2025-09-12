@@ -9,7 +9,7 @@ export const Game = ({mouseCount, setMouseCount}: IMouse)=>{
         <main className="flex flex-row w-full h-[calc(100vh-10vh)]">
             <ClickSide mouseCount={mouseCount} setMouseCount={setMouseCount}/>
             <MiddleSide/>
-            <UpgradeSide/>
+            <UpgradeSide mouseCount={mouseCount} setMouseCount={setMouseCount}/>
         </main>
     )
 };
