@@ -1,4 +1,4 @@
-import { Game } from "./components/game"
+import { Game } from "./pages/game"
 import { Header } from "./components/header"
 
 function App() {

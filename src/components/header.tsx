@@ -4,6 +4,7 @@ export const Header = ()=>{
           <h1 className="font-semibold text-2xl md:text-4xl">
             Mouse Clicker
           </h1>
+          
         </header>
     )
 };

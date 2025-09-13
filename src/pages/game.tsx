@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { ClickSide } from "./clickSide";
-import { MiddleSide } from "./middleSide";
-import { UpgradeSide } from "./upgradeSide";
 import { useUnsavedChanges } from "../hooks/hooks";
+import { ClickSide } from "../components/clickSide";
+import { MiddleSide } from "../components/middleSide";
+import { UpgradeSide } from "../components/upgradeSide";
+
 
 
 export const Game = ()=>{
