@@ -1,17 +1,12 @@
-import { useEffect } from 'react';
 import { useUpgrades } from '../hooks/upgrades';
 import type { IMouse } from '../interfaces/interfaces';
 import { Upgrade } from './upgrade';
 export const UpgradeSide = ({mouseCount, setMouseCount, increment, setIncrement}:IMouse)=>{
     const upgrades = useUpgrades();
-    useEffect(() => {
-        const interval = setInterval(() => {
+        setTimeout(() => {
             if(increment<1) return;
             else setMouseCount(mouseCount+=increment);
         }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
     return(
         <div className="h-full w-1/2 md:w-1/4 flex flex-col">
             {upgrades.map((upgrade, key)=>(
