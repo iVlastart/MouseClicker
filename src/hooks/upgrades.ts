@@ -1,12 +1,14 @@
 import { useUpgradesStates } from "./upgradeHook";
 import mousetrap from '../components/sprites/mousetrap.png';
 import cheese from '../components/sprites/cheese.png';
+import { useUnsavedChanges } from "./saveStates";
 
-export const useUpgrades = ()=>{
+export const useUpgrades = (mouseCount:number, increment: number)=>{
     const { 
         mouseTrapPrice, setMouseTrapPrice, mouseTrapCount, setMouseTrapCount,
         cheeseCount, setCheeseCount, cheesePrice, setCheesePrice,
     } = useUpgradesStates();
+    useUnsavedChanges(mouseCount, mouseTrapCount, mouseTrapPrice, cheeseCount, cheesePrice, increment);
     const upgrades = [
         {
             id: 1,
