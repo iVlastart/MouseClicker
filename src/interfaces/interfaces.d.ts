@@ -3,11 +3,8 @@ import type { Dispatch, SetStateAction } from "react";
 interface IMouse{
     mouseCount: number,
     setMouseCount: Dispatch<SetStateAction<number>>,
-}
-
-interface IMouseTrap
-{
-    
+    increment: number,
+    setIncrement: Dispatch<SetStateAction<number>>,
 }
 
 interface IUpgrade{
