@@ -4,7 +4,7 @@ import mouseImg from './sprites/mouse.png';
 export const ClickSide = ({mouseCount, setMouseCount, increment}:IMouse)=>{
 
     const handleMouseImgClick = ()=>{
-        setMouseCount(mouseCount+=1);
+        setMouseCount(prev => prev + 1);
     };
 
     return(
