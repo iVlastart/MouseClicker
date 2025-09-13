@@ -15,7 +15,7 @@ export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse, bon
                             onClick={handlePurchase}>
             <img src={img} alt="Mouse Trap" className="w-16 h-16"/>
             <div className="flex flex-col w-1/3 items-center">
-                <span className="text-2xl">
+                <span className="text-lg md:text-2xl font-semibold">
                     {name}
                 </span>
                 <span className={`${mouse.mouseCount>=price?'text-green-500':'text-red-500'}`}>
