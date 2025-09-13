@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState } from "react"
 
-export const useUpgradeHook = () => {
-    //mouse trap  
-    const [mouseTrapPrice, setMouseTrapPrice] = useState<number>(15);
-    const [mouseTrapIncrement, setMouseTrapIncrement] = useState<number>(0.5*mouseTrapPrice);
-    const [mouseTrapCount, setMouseTrapCount] = useState<number>(0);
+export const useUpgrades = ()=>{
+    const [mouseTrapCount, setMouseTrapCount] = useState(0);
+    const [mouseTrapPrice, setMouseTrapPrice] = useState(15);
+    
+    const [cheeseCount, setCheeseCount] = useState(0);
+    const [cheesePrice, setCheesePrice] = useState(100);
+    
 
-    return{ 
-            mouseTrapPrice, setMouseTrapPrice, mouseTrapIncrement, setMouseTrapIncrement, mouseTrapCount, setMouseTrapCount,
-    };
-};
+    return{
+        mouseTrapPrice, setMouseTrapPrice, mouseTrapCount, setMouseTrapCount,
+        cheeseCount, setCheeseCount, cheesePrice, setCheesePrice,
+    }
+}

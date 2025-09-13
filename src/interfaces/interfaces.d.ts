@@ -2,18 +2,20 @@ import type { Dispatch, SetStateAction } from "react";
 
 interface IMouse{
     mouseCount: number,
-    setMouseCount: Dispatch<SetStateAction<number>>
+    setMouseCount: Dispatch<SetStateAction<number>>,
 }
 
-interface IMouseTrap{
+interface IMouseTrap
+{
     
 }
+
 interface IUpgrade{
-    key: number,
     img: string,
-    price: number,
-    increment: number, 
+    name: string,
+    price: number, 
+    setPrice: Dispatch<SetStateAction<number>>,
     count: number,
-    isVisible: boolean,
+    setCount: Dispatch<SetStateAction<number>>,
     mouse: IMouse
 }
