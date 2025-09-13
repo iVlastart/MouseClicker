@@ -1,11 +1,12 @@
 import type { IUpgrade } from "../interfaces/interfaces"
 
-export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse}:IUpgrade)=>{
+export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse, bonus}:IUpgrade)=>{
     const handlePurchase = ()=>{
         if(mouse.mouseCount<price) return;
         setCount(count+=1);
         mouse.setMouseCount(mouse.mouseCount-price);
-        setPrice(Math.floor(price+(price/2)));
+        setPrice(Math.round(price+(price/2)));
+        mouse.setIncrement(mouse.increment+=bonus);
     };
     return(
         <div className="flex flex-row h-fit w-full hover:cursor-pointer hover:bg-gray-200
@@ -17,7 +18,7 @@ export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse}:IUp
                 <span className="text-2xl">
                     {name}
                 </span>
-                <span className={`${mouse.mouseCount>price?'text-green-500':'text-red-500'}`}>
+                <span className={`${mouse.mouseCount>=price?'text-green-500':'text-red-500'}`}>
                     {price}
                 </span>
             </div>

@@ -14,5 +14,6 @@ interface IUpgrade{
     setPrice: Dispatch<SetStateAction<number>>,
     count: number,
     setCount: Dispatch<SetStateAction<number>>,
-    mouse: IMouse
+    mouse: IMouse,
+    bonus: number
 }

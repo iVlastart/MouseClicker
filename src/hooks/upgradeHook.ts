@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const useUpgrades = ()=>{
+export const useUpgradesStates = ()=>{
     const [mouseTrapCount, setMouseTrapCount] = useState(0);
     const [mouseTrapPrice, setMouseTrapPrice] = useState(15);
     
