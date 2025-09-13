@@ -8,9 +8,12 @@ export const NotFound = ()=>{
                 <span className="text-center">404</span>
                 <span>Page Not Found</span>
             </span>
-            <Button>
-                <Link to={'/'}>Return back to game</Link>
-            </Button>
+            <div className="absolute bottom-1/6 text-xl left-1/2 -translate-1/2">
+                <Button>
+                    <Link to={'/'}>Return back to game</Link>
+                </Button>
+            </div>
+            
         </div>
     );
 };
