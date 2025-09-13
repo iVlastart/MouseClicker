@@ -1,4 +1,4 @@
-import type { Dispatch, SetStateAction } from "react";
+import type { Dispatch, ReactNode, SetStateAction } from "react";
 
 interface IMouse{
     mouseCount: number,
@@ -16,4 +16,8 @@ interface IUpgrade{
     setCount: Dispatch<SetStateAction<number>>,
     mouse: IMouse,
     bonus: number
+}
+
+interface IButton{
+    children: ReactNode
 }
