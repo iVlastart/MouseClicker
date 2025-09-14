@@ -3,7 +3,7 @@ import { useUpgrades } from '../hooks/upgrades';
 import type { IMouse } from '../interfaces/interfaces';
 import { Upgrade } from './upgrade';
 export const UpgradeSide = ({mouseCount, setMouseCount, increment, setIncrement}:IMouse)=>{
-    const upgrades = useUpgrades(mouseCount, increment);
+    const upgrades = useUpgrades(mouseCount);
     useEffect(() => {
         if (increment < 1) return;
 
