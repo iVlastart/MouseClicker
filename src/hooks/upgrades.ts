@@ -4,7 +4,7 @@ import cheese from '../components/sprites/cheese.png';
 import bCheese from '../components/sprites/bCheese.png'
 import { useUnsavedChanges } from "./saveStates";
 
-export const useUpgrades = (mouseCount:number, increment: number)=>{
+export const useUpgrades = (mouseCount:number)=>{
     const { 
         mouseTrapPrice, setMouseTrapPrice, mouseTrapCount, setMouseTrapCount,
         cheeseCount, setCheeseCount, cheesePrice, setCheesePrice,
