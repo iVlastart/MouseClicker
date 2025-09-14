@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 
 export const useUnsavedChanges = (mouseCount: number, mouseTrapCount:number, mouseTrapPrice: number,
-                                    cheeseCount: number, cheesePrice: number, increment: number) => {
+                                    cheeseCount: number, cheesePrice: number,  
+                                    bCheeseCount: number, bCheesePrice: number) => {
 
     useEffect(() => {
         const handleBeforeUnload = (e: BeforeUnloadEvent) => {
@@ -14,7 +15,10 @@ export const useUnsavedChanges = (mouseCount: number, mouseTrapCount:number, mou
             localStorage.setItem('cheeseCount', String(cheeseCount));
             localStorage.setItem('cheesePrice', String(cheesePrice));
 
-            localStorage.setItem('increment', String(increment));
+            //Biggie Cheese
+            localStorage.setItem('bCheeseCount', String(bCheeseCount));
+            localStorage.setIkltem('bCheesePrice', String(bCheesePrice));
+
             e.preventDefault();
         };
         

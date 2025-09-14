@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import type { IUpgrade } from "../interfaces/interfaces"
 
 export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse, bonus}:IUpgrade)=>{
@@ -6,8 +7,11 @@ export const Upgrade = ({img, name, price, setPrice, count, setCount, mouse, bon
         setCount(prev => prev + 1);
         mouse.setMouseCount(prev => prev - price);
         setPrice(prev => Math.round(prev + (prev / 2)));
-        mouse.setIncrement(prev=> prev + bonus);
+        mouse.setIncrement(prev=> !isNaN(prev) ? prev + bonus : bonus);
     };
+    useEffect(() => {
+    localStorage.setItem('increment', String(mouse.increment));
+}, [mouse.increment]);
     return(
         <div className="flex flex-row h-fit w-full hover:cursor-pointer hover:bg-gray-200
                             max-w-sm mt-10 justify-evenly items-center bg-white border 

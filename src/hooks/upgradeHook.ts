@@ -12,10 +12,17 @@ export const useUpgradesStates = ()=>{
     const [cheesePrice, setCheesePrice] = useState(
         initialCheesePrice>0?initialCheesePrice:100
     );
+
+    const [bCheeseCount, setBCheeseCount] = useState(Number(localStorage.getItem('bCheeseCount'))??0);
+    const initialBCheesePrice = Number(localStorage.getItem('bCheesePrice'));
+    const [bCheesePrice, setBCheesePrice] = useState(
+        initialBCheesePrice>0?initialBCheesePrice:999
+    ); 
     
 
     return{
         mouseTrapPrice, setMouseTrapPrice, mouseTrapCount, setMouseTrapCount,
         cheeseCount, setCheeseCount, cheesePrice, setCheesePrice,
+        bCheeseCount, setBCheeseCount, bCheesePrice, setBCheesePrice,
     }
 }
