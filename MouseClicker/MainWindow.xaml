@@ -26,7 +26,7 @@
                    VerticalContentAlignment="Center" />
         </StackPanel>
         <Button Name="btnMouseClick" Grid.Row="1" Grid.Column="0"
-                Background="Transparent" BorderBrush="Transparent">
+                Background="Transparent" BorderBrush="Transparent" Click="btnMouseClick_Click">
             <Image Source="/sprites/mouse.png" />
         </Button>
     </Grid>

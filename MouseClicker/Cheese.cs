@@ -13,7 +13,7 @@ namespace MouseClicker
 			get { return _cheese; }
 			set
 			{
-				_cheese=_cheese<0?0:value;
+				_cheese=value;
             }
 		}
 
@@ -24,7 +24,7 @@ namespace MouseClicker
             get { return cps; }
             set
             {
-                cps = cps < 0 ? 0 : value;
+                cps = value;
             }
         }
 

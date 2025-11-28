@@ -24,6 +24,7 @@ namespace MouseClicker
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             lblCheese.Content = Cheese.setCheeseLabel();
+            lblCPS.Content = Cheese.setCPSLabel();
         }
 
         private void btnMouseClick_Click(object sender, RoutedEventArgs e)
