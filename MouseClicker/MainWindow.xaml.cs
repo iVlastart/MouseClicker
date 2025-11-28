@@ -20,5 +20,16 @@ namespace MouseClicker
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            lblCheese.Content = Cheese.setCheeseLabel();
+        }
+
+        private void btnMouseClick_Click(object sender, RoutedEventArgs e)
+        {
+            Cheese.cheese++;
+            lblCheese.Content = Cheese.setCheeseLabel();
+        }
     }
 }

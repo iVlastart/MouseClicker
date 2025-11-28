@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MouseClicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -18,15 +18,15 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Bottom">
-            <Label Content="Loading..." Grid.Row="0" Grid.Column="0" 
-                   FontSize="15" FontWeight="Bold" 
+            <Label Name="lblCheese" Content="Loading..." Grid.Row="0" Grid.Column="0" 
+                   FontSize="15" FontWeight="Bold"
                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-            <Label Content="Loading..." Grid.Row="0" Grid.Column="0" 
+            <Label Name="lblCPS" Content="Loading..." Grid.Row="0" Grid.Column="0" 
                    FontSize="10" HorizontalContentAlignment="Center" 
                    VerticalContentAlignment="Center" />
         </StackPanel>
-        <Button Grid.Row="1" Grid.Column="0" 
-                Background="Transparent" BorderBrush="Transparent">
+        <Button Name="btnMouseClick" Grid.Row="1" Grid.Column="0"
+                Background="Transparent" BorderBrush="Transparent" Click="btnMouseClick_Click">
             <Image Source="/sprites/mouse.png" Stretch="Uniform" />
         </Button>
     </Grid>
