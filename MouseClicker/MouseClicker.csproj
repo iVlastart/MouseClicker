@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="sprites\mouse.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="sprites\mouse.png" />
+  </ItemGroup>
+
 </Project>

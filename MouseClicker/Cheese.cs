@@ -17,10 +17,26 @@ namespace MouseClicker
             }
 		}
 
-		internal static string setCheeseLabel()
+        private static UInt128 cps;
+
+        internal static UInt128 CPS
+        {
+            get { return cps; }
+            set
+            {
+                cps = cps < 0 ? 0 : value;
+            }
+        }
+
+        internal static string setCheeseLabel()
 		{
 			return $"{cheese.ToString()} cheese";
 		}
+
+        internal static string setCPSLabel()
+        {
+            return $"{CPS.ToString()} CPS";
+        }
 
     }
 }
