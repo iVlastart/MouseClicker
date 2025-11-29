@@ -17,11 +17,14 @@ namespace MouseClicker
                     <Label Content="0" FontSize="20"/>
             </StackPanel>
          */
+        internal static UInt128 CheeseCount { get; set; } = 0;
+        internal static UInt128 CheesePrice { get; set; } = 10;
+        internal static UInt128 CheeseCPS { get; set; } = 5;
         private record UpgradeItem(string Name, string Img, UInt128 Count,
                                 UInt128 Price, UInt128 CPS);
         static List<UpgradeItem> upgrades = new()
         {
-            new UpgradeItem("Cheese", "cheese", 0, 10, 5),
+            new UpgradeItem("Cheese", "cheese", CheeseCount, CheesePrice, CheeseCPS),
         };
         internal static void loadUpgrades(StackPanel stckUpgrades)
         {
@@ -30,7 +33,7 @@ namespace MouseClicker
             {
                 StackPanel stackPanel = new StackPanel
                 {
-                    Orientation = System.Windows.Controls.Orientation.Horizontal
+                    Orientation = System.Windows.Controls.Orientation.Horizontal,
                 };
                 Image img = new Image
                 {
@@ -40,17 +43,20 @@ namespace MouseClicker
                 };
                 Label lblName = new Label
                 {
+                    Name = "lbl" + upgrade.Name,
                     Content = upgrade.Name,
                     FontSize = 20
                 };
                 Label lblPrice = new Label
                 {
+                    Name = "lbl" + upgrade.Name + "Price",
                     Content = upgrade.Price.ToString(),
                     FontSize = 10,
                     VerticalContentAlignment = System.Windows.VerticalAlignment.Center
                 };
                 Label lblCount = new Label
                 {
+                    Name = "lbl" + upgrade.Name + "Count",
                     Content = upgrade.Count.ToString(),
                     FontSize = 20
                 };
