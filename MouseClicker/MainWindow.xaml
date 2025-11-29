@@ -27,7 +27,43 @@
         </StackPanel>
         <Button Name="btnMouseClick" Grid.Row="1" Grid.Column="0"
                 Background="Transparent" BorderBrush="Transparent" Click="btnMouseClick_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="LightGray"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Background" Value="#DDD"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
             <Image Source="/sprites/mouse.png" />
         </Button>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <StackPanel Name="stckUpgrades" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Height="40">
+                    <Image Source="/sprites/cheese.png"/>
+                    <Label Content="Cheese" FontSize="20"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
