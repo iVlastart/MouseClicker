@@ -8,16 +8,6 @@ namespace MouseClicker
 {
     internal static class Upgrade
     {
-        //Design for the upgrade
-        /*
-            <StackPanel Orientation="Horizontal" Height="40">
-                    <Image Source="/sprites/cheese.png"/>
-                    <Label Content="Cheese" FontSize="20"/>
-                    <Label Content="0" FontSize="10" 
-                           VerticalContentAlignment="Center"/>
-                    <Label Content="0" FontSize="20"/>
-            </StackPanel>
-         */
         private record UpgradeItem(string Name, string Img,
                                 UInt32 Price, uint CPS);
         static List<UpgradeItem> upgrades = new()

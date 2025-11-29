@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MouseClicker
 {
@@ -18,11 +19,17 @@ namespace MouseClicker
     {
         public static Label LblCheeseRef = new();
         public static Label LblCPSRef = new();
+        private DispatcherTimer timer;
         public MainWindow()
         {
             InitializeComponent();
             LblCheeseRef = lblCheese;
             LblCPSRef = lblCPS;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -45,6 +52,12 @@ namespace MouseClicker
             Cheese.CPS += (UInt16)CPS;
             LblCheeseRef.Content = Cheese.setCheeseLabel();
             LblCPSRef.Content = Cheese.setCPSLabel();
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            Cheese.cheese += Cheese.CPS;
+            lblCheese.Content = Cheese.setCheeseLabel();
         }
     }
 }
