@@ -59,10 +59,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto"
                       Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
             <StackPanel Name="stckUpgrades" Orientation="Vertical">
-                <StackPanel Orientation="Horizontal" Height="40">
-                    <Image Source="/sprites/cheese.png"/>
-                    <Label Content="Cheese" FontSize="20"/>
-                </StackPanel>
+                
             </StackPanel>
         </ScrollViewer>
     </Grid>

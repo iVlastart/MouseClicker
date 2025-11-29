@@ -25,6 +25,7 @@ namespace MouseClicker
         {
             lblCheese.Content = Cheese.setCheeseLabel();
             lblCPS.Content = Cheese.setCPSLabel();
+            Upgrade.loadUpgrades(stckUpgrades);
         }
 
         private void btnMouseClick_Click(object sender, RoutedEventArgs e)
