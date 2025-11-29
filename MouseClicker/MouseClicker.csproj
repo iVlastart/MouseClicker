@@ -11,11 +11,13 @@
   <ItemGroup>
     <None Remove="sprites\cheese.png" />
     <None Remove="sprites\mouse.png" />
+    <None Remove="sprites\mousetrap.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="sprites\cheese.png" />
     <Resource Include="sprites\mouse.png" />
+    <Resource Include="sprites\mousetrap.png" />
   </ItemGroup>
 
 </Project>

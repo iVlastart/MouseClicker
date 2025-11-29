@@ -16,9 +16,13 @@ namespace MouseClicker
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Label LblCheeseRef = new();
+        public static Label LblCPSRef = new();
         public MainWindow()
         {
             InitializeComponent();
+            LblCheeseRef = lblCheese;
+            LblCPSRef = lblCPS;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -32,6 +36,15 @@ namespace MouseClicker
         {
             Cheese.cheese++;
             lblCheese.Content = Cheese.setCheeseLabel();
+        }
+        internal static void PurchaseUpgrade(object sender, MouseEventArgs e,
+                                            Label lblPrice, UInt32 Price, uint CPS)
+        {
+            if (Cheese.cheese < Price) return;
+            Cheese.cheese -= Price;
+            Cheese.CPS += (UInt16)CPS;
+            LblCheeseRef.Content = Cheese.setCheeseLabel();
+            LblCPSRef.Content = Cheese.setCPSLabel();
         }
     }
 }

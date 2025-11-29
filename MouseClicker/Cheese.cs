@@ -6,9 +6,9 @@ namespace MouseClicker
 {
     internal static class Cheese
     {
-		private static UInt128 _cheese;
+		private static UInt32 _cheese;
 
-		internal static UInt128 cheese
+		internal static UInt32 cheese
 		{
 			get { return _cheese; }
 			set
@@ -17,9 +17,9 @@ namespace MouseClicker
             }
 		}
 
-        private static UInt128 cps;
+        private static UInt16 cps;
 
-        internal static UInt128 CPS
+        internal static UInt16 CPS
         {
             get { return cps; }
             set
